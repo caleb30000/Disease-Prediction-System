@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction System</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+    <!-- CSS PLUGINS -->
+    <!-- Animate --><link rel="stylesheet" href="../static/css/animate.css">
+    <!-- Font Awesome --><link rel="stylesheet" href="../static/css/fontawesome.css">
+    <!-- Owl Carousel --><link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <!-- Owl Carousel --><link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+
+    <!-- JAVASCRIPT PLUGINS -->
+    <!-- Jquery --><script src="../static/js/jquery.min.js"></script>
+    <!-- Font Awesome --><script src="../static/js/fontawesome.js"></script>
+    <!-- Owl Carousel --><script src="../static/js/owl.carousel.min.js"></script>
+</head>
+<body>
+    
+    <div class="logo">
+        <div class="top">disease</div>
+        <div class="mid">prediction</div>
+        <div class="low">system</div>
+    </div>
+
+    <div class="help">
+        <i class="fas fa-question-circle"></i>
+    </div>
+
+    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid"><source src="assets/video/blood cells.mp4" type="video/mp4"></video>
+
+    <div class="slide first">
+
+        <div class="greet">
+            welcome <div class="namer">{{user_}}</div>
+        </div>
+
+        <div class="prompt">
+            <div class="que">selected symptoms</div>
+
+            <form action="" method="post" class="pick">
+
+                <label for="symp1">first symptom</label>
+                <input type="text" name="symp1" id="" value= "{{symp_1}}" disabled>
+                
+                <label for="symp2">second symptom</label>
+                <input type="text" name="symp2" id="" value= "{{symp_2}}" disabled>
+                
+                <label for="symp3">third symptom</label>
+                <input type="text" name="symp3" id="" value= "{{symp_3}}" disabled>
+
+                <label for="symp4">fourth symptom</label>
+                <input type="text" name="symp4" id="" value= "{{symp_4}}" disabled>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="slide second">
+
+        <div class="greet">
+            prediction <div class="namer">models</div>
+        </div>
+
+        <div class="prompt">
+
+            <div class="list">
+
+                <div class="tab">
+                    <div class="tab-name">{{model_1}}</div>
+                    <div class="tab-info">
+                        The {{model_1}} model predicts that the disease with the symptoms {{symp_1}}, {{symp_2}}, {{symp_3}}, {{symp_4}} is {{result_1}}.
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <div class="tab-name">{{model_2}}</div>
+                    <div class="tab-info">
+                        The {{model_2}} model predicts that the disease with the symptoms {{symp_1}}, {{symp_2}}, {{symp_3}}, {{symp_4}} is {{result_2}}.
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <div class="tab-name">{{model_3}}</div>
+                    <div class="tab-info">
+                        The {{model_3}} model predicts that the disease with the symptoms {{symp_1}}, {{symp_2}}, {{symp_3}}, {{symp_4}} is {{result_3}}.
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <div class="tab-name">{{model_4}}</div>
+                    <div class="tab-info">
+                        The {{model_4}} model predicts that the disease with the symptoms {{symp_1}}, {{symp_2}}, {{symp_3}}, {{symp_4}} is {{result_4}}.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="slide active third">
+
+        <div class="greet">
+            Final <div class="namer">reading</div>
+        </div>
+        <p>Based on the inference of all algorithms, the most likely condition is {{result_4}}. 
+            You are advised to seek medical attention in order to reduce the risk of further damage to your system. Do so quickly.
+        </p>
+        <br>
+        <p>Book a doctors appointment now at the Babcock University Teaching Hospital <a href="https://www.babcock.edu.ng/buth">here</a>.</p>
+        <div class="prompt">
+            
+        </div>
+
+    </div>
+    
+    
+    
+    <script>
+        var vid = document.getElementById("bgvid");
+        vid.playbackRate = 0.5;
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction System</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+    <!-- CSS PLUGINS -->
+    <!-- Animate --><link rel="stylesheet" href="../static/css/animate.css">
+    <!-- Font Awesome --><link rel="stylesheet" href="../static/css/fontawesome.css">
+    <!-- Owl Carousel --><link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <!-- Owl Carousel --><link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+
+    <!-- JAVASCRIPT PLUGINS -->
+    <!-- Jquery --><script src="../static/js/jquery.min.js"></script>
+    <!-- Font Awesome --><script src="../static/js/fontawesome.js"></script>
+    <!-- Owl Carousel --><script src="../static/js/owl.carousel.min.js"></script>
+</head>
+<body style="background-color: var(--color1); overflow-y: hidden;">
+    
+    <div class="logo spec">
+        <div class="top">disease</div>
+        <div class="mid">prediction</div>
+        <div class="low">system</div>
+    </div>
+
+    <div class="help spec">
+        <i class="fas fa-question-circle"></i>
+    </div>
+
+    <div class="create" id="reg">
+
+        <div class="heading">register</div>
+
+        <form method="POST">
+            
+            <label for="name">full name</label>
+            <input type="text" name="name" id="" placeholder="full name" class="named">
+
+            <label for="email">email address</label>
+            <input type="email" name="email" id="" placeholder="email address" class="emailed">
+
+            <label for="password">password</label>
+            <input type="password" name="password" id="" placeholder="password" class="passworded">
+
+            <button type="submit" name="button" value="register">register</button>
+        </form>
+
+        <div class="switch" onclick="logSwitch()">
+            <div class="tip"><i class="fas fa-hand-point-right"></i></div>
+            <div class="stee">already have an account?</div>
+        </div>
+
+    </div>
+
+    <div class="create" id="log">
+
+        <div class="heading">login</div>
+
+        <form action="" method="post">
+            
+            <label for="email">email address</label>
+            <input type="email" name="email" id="" placeholder="email address" class="emailed">
+
+            <label for="password">password</label>
+            <input type="password" name="password" id="" placeholder="password" class="passworded">
+
+            <button type="submit" name="button" value="log-in">login</button>
+            <!-- Text for user message -->
+            <p id="message">{{message}}</p>
+            <!-- Edit message p here.. -->
+
+        </form>
+
+        <div class="switch" onclick="regSwitch()">
+            <div class="tip"><i class="fas fa-hand-point-left"></i></div>
+            <div class="stee">don't have an account?</div>
+        </div>
+
+    </div>
+
+    <div id="reg-image"><img src="../static/img/reg.png" alt=""></div>
+    <div id="log-image"><img src="../static/img/log.png" alt=""></div>
+
+
+    <script>
+
+    // Message alert control
+    if (document.getElementById("message").textContent == "User registered, Log in!"){
+        const alert_message = "User registered, Log in!"
+        alert(alert_message)
+    }
+    else if (document.getElementById("message").textContent == "Invalid Username or Password, Sign up."){
+        const alert_message = "Invalid Username or Password, Sign up."
+        alert(alert_message)
+    }
+    else if (document.getElementById("message").textContent == "User already exists."){
+        const alert_message = "User already exists, try signin in."
+        alert(alert_message)
+    }
+
+
+        function logSwitch() {
+            document.getElementById('reg').style.left = "-150%";
+            document.getElementById('log').style.right = "15%";
+            document.getElementById('log-image').style.bottom = "0";
+            document.getElementById('reg-image').style.bottom = "-900px";
+        }
+
+        function regSwitch() {
+            document.getElementById('reg').style.left = "15%";
+            document.getElementById('log').style.right = "-150%";
+            document.getElementById('reg-image').style.bottom = "0";
+            document.getElementById('log-image').style.bottom = "-900px";
+        }
+
+    </script>
+</body>
+</html>
